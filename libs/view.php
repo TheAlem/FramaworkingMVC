@@ -7,14 +7,10 @@ class View
         echo "<p>Vista Base</p>";
     }
 
-    function render($nombre)
-    {
+    function render($nombre){ //main/index
         $ruta = "views/" . $nombre . ".php";
-        if (file_exists($ruta)) {
-            require $ruta;
-        } else {
-            echo "<p>Error: No se encontró la vista '$nombre'</p>";
-        }
+       // echo $ruta;
+        require $ruta;
     }
 }
 

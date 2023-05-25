@@ -26,7 +26,8 @@ class App
                 if (method_exists($c, $url[1])) {
                     $c->{$url[1]}();
                 } else {
-                    echo "<p>El controlador no tiene la funcion " . $url[1] . "</p>";
+                    require_once "controllers/errores.php";
+                    $e = new Errores();
                 }
             }
             // Verificar si la función especificada en la URL existe en el controlador
