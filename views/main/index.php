@@ -10,9 +10,11 @@
 </head>
 
 <body>
-    <?php echo require "views/header.php" ?>
-    <p>Estas en la Vista Main</p>
-    <?php echo require "views/footer.php" ?>
+    <?php  require "views/header.php" ?>
+    <div id="main">
+    <h1 class="center">Estas en la Vista Main</h1>
+    </div>
+    <?php  require "views/footer.php" ?>
 </body>
 
 </html>

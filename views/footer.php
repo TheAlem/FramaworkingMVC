@@ -1,3 +1,3 @@
-<div class="footer">
-    <h3>Autor: Jose Alem Rodriguez V. -Programacion WEB II - Univalle</h3>
+<div class ="footer">
+    <h3>Autor:Franco Leonel Rojas - PROGRAMACION WEB II - UNIVALLE</h3>
 </div>
