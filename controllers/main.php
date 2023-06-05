@@ -1,15 +1,18 @@
 <?php
+
 class Main extends Controller
 {
+    public $view;
     function __construct()
     {
-        // Llama al constructor de la clase padre
         parent::__construct();
-        $this->view->render("main/index");
-        echo "<p style= 'color:blue'>Este es el main</p>";
+        $this->view->render("main/index");  
+        //echo "<p> Llamaste al controlador main</p>";
+        parent::__construct();
     }
-    function saludo(){
-        echo "<p style= 'color:green'>Llamaste al metodo saludo</p>";
+    function saludo()
+    {
+        echo "llamade al metodo saludo";
     }
 }
 ?>

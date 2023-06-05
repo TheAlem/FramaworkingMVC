@@ -1,6 +1,7 @@
 <?php
 class Venta extends Controller{
     
+    public $view;
     function __construct()
     {
         parent::__construct(); //Llamamos al constructor de la clase base \

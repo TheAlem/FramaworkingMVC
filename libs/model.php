@@ -1,5 +1,4 @@
 <?php
-
 class Model
 {
     function __construct()
@@ -7,5 +6,4 @@ class Model
         echo "<p>Modelo Base</p>";
     }
 }
-
 ?>

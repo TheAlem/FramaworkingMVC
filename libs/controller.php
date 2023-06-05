@@ -1,14 +1,11 @@
 <?php
-
 class Controller
 {
+    public $view;
     function __construct()
     {
-        $this->view = new View(); //objeto vista
-        //function render
-        echo "<p>Controlador Base</p>";
-
-        
+        //echo "<p>Controlador Base</p>";
+        $this->view = new View(); //Objecto Vista
     }
 }
 

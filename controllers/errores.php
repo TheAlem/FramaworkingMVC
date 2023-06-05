@@ -1,6 +1,7 @@
 <?php
 
 class Errores extends Controller{
+    public $view;
     function __construct()
     {
         // Llama al constructor de la clase padre

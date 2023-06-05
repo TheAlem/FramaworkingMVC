@@ -3,42 +3,38 @@ class App
 {
     function __construct()
     {
-        echo "Mi aplicación MVC de WEB II";
+        //echo"<p>Mi aplicacion MVC de WEB II";
         // Lógica en la URL
-        $url = isset($_GET['url']) ? $_GET['url'] : '';
-        echo "<br>";
-        echo $url;
+        $url = isset($_GET['url']) ? $_GET['url'] : 'main';
         $url = explode("/", $url);
-        echo "<br>";
-        echo "<br>";
-        echo $url[0];
-        echo "<br>";
 
-        // Llamada al controlador
-        $ruta = "controllers/" . $url[0] . ".php";
-        echo $ruta;
-        echo "<br>";
-
-        if (file_exists($ruta)) {
-            require_once $ruta;
+        //echo "<br>";
+        //echo "<br>";
+        //echo $url[0];
+        //echo "<br>";
+        //echo "<br>";
+        //Llamamos al controlador
+        $rute = "controllers/" . $url[0] . ".php";
+        //echo "Ruta: ".$rute;
+        //echo "<br>";
+        if (file_exists(($rute))) {
+            require_once $rute;
             $c = new $url[0];
+            //Procesamos el metodo
             if (isset($url[1])) {
                 if (method_exists($c, $url[1])) {
                     $c->{$url[1]}();
                 } else {
-                    require_once "controllers/errores.php";
-                    $e = new Errores();
+                    //echo "<p style='color: red'>El Metodo ".$url[1]." no existe</p>";
                 }
             }
-            // Verificar si la función especificada en la URL existe en el controlador
-
         } else {
-            $errorController = "controllers/errores.php";
-            require_once $errorController;
-            $c = new errores();
-            //echo "No existe el recurso";
-            //crear un controlador de errores
+            //Crear Controladores de Errores
+            require_once "controllers/errores.php";
+            $e = new Errores();
         }
+
     }
 }
+
 ?>

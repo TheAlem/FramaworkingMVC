@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="public/default.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-    <style>
-        p{
-            color: green;
-        }
-    </style>
 </head>
+
 <body>
-    <p>Bienvenido a la pagina principal</p>
+    <?php echo require "views/header.php" ?>
+    <p>Estas en la Vista Main</p>
+    <?php echo require "views/footer.php" ?>
 </body>
+
 </html>

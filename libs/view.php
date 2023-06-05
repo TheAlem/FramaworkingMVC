@@ -1,17 +1,17 @@
 <?php
-
 class View
 {
     function __construct()
     {
-        echo "<p>Vista Base</p>";
+        //echo "<p>Vista Base</p>";
     }
-
-    function render($nombre){ //main/index
+    //Funcion que llama a la vista respectiva
+    function render($nombre)
+    {
         $ruta = "views/" . $nombre . ".php";
-       // echo $ruta;
+        //echo $ruta;
         require $ruta;
+        //require "views/".$nombre."/index";
     }
 }
-
 ?>
