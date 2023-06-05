@@ -2,17 +2,16 @@
 
 class Main extends Controller
 {
-    public $view;
     function __construct()
     {
         parent::__construct();
-        $this->view->render("main/index");  
-        //echo "<p> Llamaste al controlador main</p>";
-        parent::__construct();
+        $this->view->render("main/index");
+        //echo "<p>Llamaste al controlador main</p>";
     }
     function saludo()
     {
-        echo "llamade al metodo saludo";
+        echo "<p>Llamaste al metodo saludo</p>";
     }
 }
+
 ?>
